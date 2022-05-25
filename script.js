@@ -1,13 +1,16 @@
-const users = {
+const users = {}
 
+for (let i = 0; i < 4; i++){
+    const name = prompt('Enter name')
+    const age = prompt('Enter your age')
+    users[i + 1] = {
+        name: name,
+        age: age
+    }
 }
 
-for (let i = 1; i < 4; i++){
-    let name = prompt('Enter name')
-    let age = prompt('Enter your age')
-
-    users.name = name;
-    users.age = age
-
-    console.log(users);
+for(const key in users) {
+    console.log(`User: ${key}`);
+    console.log(`Name: ${users[key].name}`);
+    console.log(`Age: ${users[key].age}`);
 }
